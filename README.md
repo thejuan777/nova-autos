@@ -1,3 +1,17 @@
+## Portfolio Project
+
+NOVA AUTOS is a responsive dealership website and management system built as a portfolio project.
+
+It demonstrates my ability to build complete business websites with:
+- Responsive design
+- Authentication
+- Database integration
+- Image storage
+- Admin dashboards
+- Mobile support
+- Secure data access with RLS
+
+  
 # NOVA AUTOS
 
 Proyecto de portfolio que simula una agencia multimarca, con catálogo público y panel privado para administrar vehículos y fotografías. Implementado con HTML, CSS y JavaScript nativo; Supabase aporta PostgreSQL, Auth y Storage. No utiliza frameworks ni requiere un servidor de aplicación.
