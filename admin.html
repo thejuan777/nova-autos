@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Administración | NOVA AUTOS</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css"><script type="module" src="admin.js"></script></head>
+<body>
+<header class="header"><a href="index.html" class="logo">NOVA <span>AUTOS</span></a><a class="header-link" href="index.html">Ver sitio público</a></header>
+<main class="admin-shell">
+<p id="admin-message" class="notice" role="status" aria-live="polite">Verificando acceso…</p>
+<noscript>Activá JavaScript para acceder al panel.</noscript>
+<section id="admin-content" hidden>
+<div class="admin-heading"><div><p class="section-label">NOVA AUTOS</p><h1>Panel de administración</h1><p id="vehicle-count"></p></div><div class="actions"><button id="add-vehicle" class="action primary">+ Agregar vehículo</button><button id="logout" class="action">Cerrar sesión</button></div></div>
+<details class="legacy-import"><summary>Migrar vehículos de la web anterior</summary><p class="help">Recuperá los datos y la foto original. Revisá y completá lo que falta antes de publicar. Un vehículo ya migrado se abre para editar.</p><div class="actions"><label>Vehículo anterior<select id="legacy-vehicle"></select></label><button id="import-legacy" class="action" disabled>Preparar vehículo</button></div></details>
+<div id="admin-vehicles" class="admin-grid"></div>
+</section>
+</main>
+<dialog id="vehicle-dialog" aria-labelledby="form-title">
+<form id="vehicle-form">
+<div class="dialog-heading"><h2 id="form-title">Agregar vehículo</h2><button type="button" id="close-form" class="action" aria-label="Cerrar formulario">Cerrar</button></div>
+<p class="help">Los campos con * son obligatorios. Precio expresado en pesos argentinos.</p>
+<p id="form-message" class="notice" role="status" aria-live="polite" hidden></p>
+<fieldset id="vehicle-fields"><div class="form-grid">
+<label>Marca *<input name="brand" required maxlength="80"></label>
+<label>Modelo *<input name="model" required maxlength="100"></label>
+<label>Versión<input name="version" maxlength="120"></label>
+<label>Año *<input name="year" type="number" required min="1900" max="2100" step="1"></label>
+<label>Kilometraje *<input name="mileage" type="number" required min="0" max="10000000" step="1"></label>
+<label>Precio (ARS) *<input name="price" type="number" required min="0.01" max="999999999999.99" step="0.01"></label>
+<label>Condición *<select name="condition" required><option value="">Seleccionar</option><option>Nuevo</option><option>Usado</option></select></label>
+<label>Combustible *<select name="fuel" required><option value="">Seleccionar</option><option>Nafta</option><option>Diesel</option><option>Híbrido</option><option>Eléctrico</option><option>GNC</option><option>Otro</option></select></label>
+<label>Transmisión *<select name="transmission" required><option value="">Seleccionar</option><option>Manual</option><option>Automática</option></select></label>
+<label>Color<input name="color" maxlength="80"></label>
+<label>Cantidad de puertas<input name="doors" type="number" min="1" max="6" step="1"></label>
+<label>Motor<input name="engine" maxlength="100" placeholder="Ej. 1.6"></label>
+<label>Ubicación *<input name="location" required maxlength="150"></label>
+<label>Estado *<select name="status" required><option value="available">Disponible</option><option value="reserved">Reservado</option><option value="sold">Vendido</option></select></label>
+<label class="wide">Descripción<textarea name="description" rows="4" maxlength="6000"></textarea></label>
+</div>
+<section class="photo-section" aria-labelledby="photo-heading"><h3 id="photo-heading">Fotografías *</h3><p class="help">Entre 1 y 10 fotos. JPG, PNG o WebP, hasta 5 MB cada una. La primera es la principal.</p>
+<label class="upload-label">Agregar fotografías<input id="image-files" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
+<div id="image-previews" class="image-previews"></div></section>
+</fieldset>
+<div class="actions form-actions"><button id="save-vehicle" type="submit" class="action primary">Publicar vehículo</button><button id="cancel-form" type="button" class="action">Cancelar</button></div>
+</form></dialog>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title">Eliminar vehículo</h2><p id="confirm-text"></p><p class="help">Se eliminarán sus datos y fotografías. Esta acción no se puede deshacer.</p><p id="delete-message" class="notice" role="status" hidden></p><div class="actions"><button id="confirm-delete" class="action danger">Eliminar definitivamente</button><button id="cancel-delete" class="action">Cancelar</button></div></dialog>
+</body></html>

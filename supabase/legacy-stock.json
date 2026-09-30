@@ -1,0 +1,8 @@
+[
+  {"id":"11111111-1111-4111-8111-111111111101","brand":"Fiat","model":"Cronos","version":"Drive Pack Plus","year":2024,"mileage":19000,"price":25000000,"condition":"","fuel":"","transmission":"Manual","photo":"img/fiat-cronos-2024.jpg"},
+  {"id":"11111111-1111-4111-8111-111111111102","brand":"Peugeot","model":"208","version":"GT CVT","year":2026,"mileage":6000,"price":37000000,"condition":"","fuel":"","transmission":"Automática","photo":"img/peugeot-208-gt-2026.jpg"},
+  {"id":"11111111-1111-4111-8111-111111111103","brand":"Peugeot","model":"208","version":"Allure","year":2026,"mileage":93,"price":33900000,"condition":"","fuel":"Nafta","transmission":"","photo":"img/peugeot-208-allure-2026.jpg"},
+  {"id":"11111111-1111-4111-8111-111111111104","brand":"Nissan","model":"Sentra","version":"Sense","year":2016,"mileage":80000,"price":18000000,"condition":"","fuel":"Nafta","transmission":"","photo":"img/nissan-sentra-2016.jpg"},
+  {"id":"11111111-1111-4111-8111-111111111105","brand":"Ford","model":"Focus","version":"SE Plus","year":2017,"mileage":null,"price":19500000,"condition":"","fuel":"Nafta","transmission":"Automática","photo":"img/ford-focus-2017.jpg"},
+  {"id":"11111111-1111-4111-8111-111111111106","brand":"Renault","model":"Duster","version":"Privilege","year":2017,"mileage":110000,"price":19900000,"condition":"","fuel":"","transmission":"Manual","photo":"img/renault-duster-2017.jpg"}
+]
